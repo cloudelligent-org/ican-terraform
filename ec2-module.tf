@@ -10,7 +10,7 @@ module "ec2-app-v1" {
   instance-name-taq = "ican-demo"
   vpc-security-group-ids = "${module.ican-ec2-sg.ec2-sg-security-group}"
   ec2-subnets-ids = ["${module.vpc.public-subnet-ids}"]
-
+  associate-public-ip-address = "true"
   #IN CASE OF LAUNCHING EC2 IN SPECIFIC SUBNETS OR PRIVATE SUBNETS, PLEASE UN-COMMENT BELOW"
   #ec2-subnets-ids = ["${module.cloudelligent-vpc.private-subnet-ids}"]
   #ec2-subnets-ids = ["","","","","",""]

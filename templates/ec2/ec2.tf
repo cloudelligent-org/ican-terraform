@@ -20,8 +20,10 @@ resource "aws_instance" "ec2" {
 # Number of EC2-instances required.
   count = "${var.number-of-ec2-instances-required}"
 
+  # Public IP Address
+  associate_public_ip_address = "${var.associate-public-ip-address}"
+
   #EXISTING KEY PAIR OR CREATE ssh-keygen -f demo #it will give private & public keys, import public in aws
-  #key_name = "${var.key-name}"
 
 # EXPORTED PUBLIC-KEY
   key_name = "${var.key-name}"

@@ -21,6 +21,10 @@ variable "number-of-ec2-instances-required" {
   default = ""
 }
 
+variable "associate-public-ip-address" {
+  default = ""
+}
+
 variable "user-data" {
   default = ""
 }
